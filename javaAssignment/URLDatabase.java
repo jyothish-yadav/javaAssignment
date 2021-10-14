@@ -185,8 +185,7 @@ public class URLDatabase {
 		}
 	}
 	
-	
-	
+		
 	/*
 	 * method to create unique url key.
 	 * @param url
@@ -198,7 +197,7 @@ public class URLDatabase {
 		ArrayList<String> urlArray= new ArrayList<String>(Arrays.asList(url.split("")));
 
 		for(int i=0;i<lengthOfUniqueKey;i++) {
-			int num=(int)Math.round(Math.random() * (url.length()-1) + 0); //finding random index 
+			int num=(int)Math.round(Math.random() * (url.length()-1)); //finding random index between 0 and url length
 			sb.append(urlArray.get(num)); //creating key with elements at random index. Uniqueness is ensured.
 		}
 		return sb.toString();
